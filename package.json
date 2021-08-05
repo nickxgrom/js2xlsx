@@ -1,0 +1,19 @@
+{
+  "name": "js2xlsx",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "convert": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickxgrom/js2xlsx.git"
+  },
+  "author": "Nikita Gromyko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nickxgrom/js2xlsx/issues"
+  },
+  "homepage": "https://github.com/nickxgrom/js2xlsx#readme"
+}
