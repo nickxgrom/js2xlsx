@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nickxgrom/js2xlsx/issues"
   },
-  "homepage": "https://github.com/nickxgrom/js2xlsx#readme"
+  "homepage": "https://github.com/nickxgrom/js2xlsx#readme",
+  "dependencies": {
+    "exceljs": "^4.2.1"
+  }
 }

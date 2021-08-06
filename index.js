@@ -4,7 +4,8 @@ const fs = require('fs'),
     sourceFileExt = path.extname(sourceFilePath).replace('.', ''),
     extensions = require("./src/extensions"),
     fileHandler = require("./src/fileHanler"),
-    modules = require('./src/modules')
+    modules = require('./src/modules'),
+    xlsxMaker = require('./src/xlsx')
 
 if (!fs.existsSync(sourceFilePath)) {
     throw new Error("No such file exist")
@@ -12,8 +13,8 @@ if (!fs.existsSync(sourceFilePath)) {
 
 if (extensions.indexOf(sourceFileExt) !== -1) {
     fileHandler(sourceFilePath)
-        .then(res => {
-            // TODO: make .xlsx
+        .then(async res => {
+            await xlsxMaker.fill(modules[sourceFileExt].parse(res))
         })
 } else {
     console.log('Extension is not supported')
