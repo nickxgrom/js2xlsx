@@ -3,7 +3,7 @@ const ExelJS = require('exceljs'),
     path = require('path')
 
 module.exports = {
-    async fill(data) {
+    async fill(data, fileName) {
         await workbook.xlsx.readFile(path.resolve(__dirname + '/template.xlsx'))
         let worksheet = workbook.getWorksheet('templateSheet')
         worksheet.columns = [
@@ -14,8 +14,7 @@ module.exports = {
 
         for (let key of Object.keys(data)) {
             worksheet.addRow({"key": key, "ru": data[key], "kz": ""});
-
         }
-        await workbook.xlsx.writeFile('result.xlsx')
+        await workbook.xlsx.writeFile(`${fileName}.xlsx`)
     }
 }
