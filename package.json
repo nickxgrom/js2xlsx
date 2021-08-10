@@ -2,9 +2,10 @@
   "name": "js2xlsx",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "convert2xlsx.js",
   "scripts": {
-    "convert2xlsx": "node index.js"
+    "convert2xlsx": "node convert2xlsx.js",
+    "convert2properties": "node convert2properties.js"
   },
   "repository": {
     "type": "git",
