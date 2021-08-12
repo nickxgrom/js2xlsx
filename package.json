@@ -5,7 +5,8 @@
   "main": "convert2xlsx.js",
   "scripts": {
     "convert2xlsx": "node convert2xlsx.js",
-    "convert2properties": "node convert2properties.js"
+    "convert2properties": "node convert2properties.js",
+    "convertJS2xlsx": "node convertObject2xlsx.js"
   },
   "repository": {
     "type": "git",
